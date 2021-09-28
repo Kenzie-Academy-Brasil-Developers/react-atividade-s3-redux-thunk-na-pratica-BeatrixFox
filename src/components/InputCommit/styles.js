@@ -1,13 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: lightcoral;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  padding: 20px 0 0;
+  @media (min-width: 768px) {
+    width: 123%;
+  }
+
   input {
     width: 70%;
     padding: 5px;
@@ -17,7 +20,7 @@ export const Container = styled.div`
   }
   button {
     width: 100px;
-    height: 60px;
+    height: 50px;
     font-size: 20px;
     background: lightgreen;
     color: darkblue;

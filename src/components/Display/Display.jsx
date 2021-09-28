@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import fotoUser from "./../../assets/naruto.gif";
-import { Container, SectionTitle } from "./style";
+import { Container, ItemCommit, SectionCommits, SectionTitle } from "./style";
 
 const Display = () => {
   const comments = useSelector((store) => store.user);
@@ -11,14 +11,14 @@ const Display = () => {
         <img src={fotoUser} alt={comments.name}></img>
         <p>{comments.name}</p>
       </SectionTitle>
-      <ul>
+      <SectionCommits>
         {comments.comments.map((comment, index) => (
-          <li key={index}>
+          <ItemCommit key={index}>
             <img src={fotoUser} alt={comments.name}></img>
             <p>{comment}</p>
-          </li>
+          </ItemCommit>
         ))}
-      </ul>
+      </SectionCommits>
     </Container>
   );
 };
